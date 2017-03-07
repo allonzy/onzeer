@@ -1,0 +1,24 @@
+#surefire
+#Tue Mar 07 16:30:41 CET 2017
+testClassesDirectory=/home/etudiants/inf/uapv1303077/workspace/onzeer/target/test-classes
+classPathUrl.2=/home/etudiants/inf/uapv1303077/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+useManifestOnlyJar=true
+classPathUrl.1=/home/etudiants/inf/uapv1303077/workspace/onzeer/target/classes
+reportsDirectory=/home/etudiants/inf/uapv1303077/workspace/onzeer/target/surefire-reports
+classPathUrl.0=/home/etudiants/inf/uapv1303077/workspace/onzeer/target/test-classes
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=/home/etudiants/inf/uapv1303077/workspace/onzeer/src/test/java
+surefireClassPathUrl.1=/home/etudiants/inf/uapv1303077/.m2/repository/org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.jar
+surefireClassPathUrl.0=/home/etudiants/inf/uapv1303077/.m2/repository/org/apache/maven/surefire/surefire-junit3/2.12.4/surefire-junit3-2.12.4.jar
+runOrder=filesystem
+useSystemClassLoader=true
+excludes0=**/*$*
+isTrimStackTrace=true
+tc.0=fr.univavignon.onzeer.AppTest
+enableAssertions=true
+includes2=**/*TestCase.java
+failIfNoTests=false
+includes1=**/*Test.java
+runStatisticsFile=/home/etudiants/inf/uapv1303077/workspace/onzeer/.surefire-DEC7AEBC51F960257659C823571DFC00794377A4
+includes0=**/Test*.java
+childDelegation=false
