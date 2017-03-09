@@ -4,18 +4,20 @@ import java.util.List;
 import fr.univavignon.onzeer.exceptions.*;
 import fr.univavignon.onzeer.model.*;
 
-public interface IServerStatus {
+public interface IServerStatus extends Runnable {
 	/**
 	 * 
 	 * @return List<Server>
+	 * @throws InterruptedException 
 	 */
-	public List<Server> getServerDown();
+	public void updateServerStatus() throws InterruptedException;
 	/**
 	 * @param server
 	 * @return
 	 * @throws ServerNotFoundException
+	 * @throws InterruptedException 
 	 */
-	public Boolean checkServerStatus(Server server) throws ServerNotFoundException;
+	public Boolean checkServerStatus(Server server) throws ServerNotFoundException, InterruptedException;
 	/**
 	 * 
 	 * @param files

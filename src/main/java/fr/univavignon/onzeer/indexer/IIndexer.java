@@ -5,7 +5,7 @@ import java.util.List;
 import fr.univavignon.onzeer.exceptions.*;
 import fr.univavignon.onzeer.model.*;
 
-public interface IIndexerController {
+public interface IIndexer {
 	/**
 	 * Get all file indexed on the application 
 	 * @return List<FileMetadata> a list off all file informations 
@@ -29,4 +29,9 @@ public interface IIndexerController {
 	 * @throws FileNotFoundException
 	 */
 	public void removeFile(FileMetadata metadata) throws FileNotFoundException;
+	/**
+	 * List all the server indexed by the app
+	 * @return List<Server> 
+	 */
+	public List<Server> getServers();
 }

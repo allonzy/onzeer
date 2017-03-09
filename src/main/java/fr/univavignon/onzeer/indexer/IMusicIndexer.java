@@ -6,7 +6,7 @@ import fr.univavignon.onzeer.exceptions.DuplicateFileException;
 import fr.univavignon.onzeer.exceptions.FileNotFoundException;
 import fr.univavignon.onzeer.model.*;
 
-public interface IMusicIndexerController extends IIndexerController {
+public interface IMusicIndexer extends IIndexer {
 	/**
 	 * Get all music indexed on the application 
 	 * @return List<FileMetadata> a list off all music informations 
