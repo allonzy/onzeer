@@ -1,7 +1,7 @@
 module Server {
 	struct Status {
 		bool avaiable;
-		int memory;
+		int freeSpace;
 	};
 	sequence<byte> byteArray;
 	sequence<string> stringArray;

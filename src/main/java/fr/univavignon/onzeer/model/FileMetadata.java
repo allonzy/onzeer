@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @SuppressWarnings("serial") //the class is abstract
 @Entity
-public abstract class FileMetadata implements Serializable {
+public abstract class FileMetadata implements Serializable, ISelectable {
 	/*
 	 * 
 	 */

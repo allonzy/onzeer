@@ -1,5 +1,5 @@
 package fr.univavignon.onzeer.model;
 
-public class AudioCriteria {
-
+public enum AudioCriteria {
+	track,title,gendra,artist,album,time
 }

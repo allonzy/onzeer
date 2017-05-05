@@ -18,4 +18,10 @@ public class AudioFileMetadata extends FileMetadata{
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+
+	@Override
+	public Boolean match(Criteria criteria) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
