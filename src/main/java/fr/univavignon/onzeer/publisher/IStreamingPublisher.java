@@ -1,5 +1,6 @@
 package fr.univavignon.onzeer.publisher;
 
+import java.net.MalformedURLException;
 import java.net.Socket;
 import java.net.URL;
 import java.util.List;

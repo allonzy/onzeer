@@ -11,8 +11,7 @@ public class IndexerFactory {
 	}
 	private static IMusicIndexer getMusicIndexer(){
 		if (musicIndexer == null ){
-			IIndexer tmpIndexer = getIndexer();
-			musicIndexer = new musicIndexer(indexer);
+			musicIndexer = new MusicIndexer();
 		}
 		return musicIndexer;
 	}

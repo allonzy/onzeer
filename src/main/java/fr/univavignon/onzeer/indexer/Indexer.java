@@ -53,10 +53,22 @@ public class Indexer implements IIndexer {
 		return serverList;
 	}
 	public Server getServerById(int id) {
-		return serverList;
+		return serverList.get(id);
 	}
 	@Override
 	public List<FileMetadata> listAllFile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Server> getServersContainingFile(FileMetadata file) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FileMetadata getFileById(int fileId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

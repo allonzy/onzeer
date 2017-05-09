@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import Ice.AsyncResult;
-import Server.Status;
 import fr.univavignon.onzeer.exceptions.ServerNotFoundException;
 import fr.univavignon.onzeer.indexer.IIndexer;
 import fr.univavignon.onzeer.indexer.IndexerFactory;
@@ -29,6 +28,7 @@ public class ServerStatus extends Thread implements IServerStatus{
 	public static int INTERVAL_TIME = 1500;
 	@Override
 	public void updateServerStatus() throws InterruptedException{
+		/*
 		IServerStatusPublisher publisher = PublisherFactory.createServerStatusPublisher();
 		IIndexer indexer = IndexerFactory.getIndexer();
 		List<Server> servers = indexer.getServers();
@@ -46,12 +46,12 @@ public class ServerStatus extends Thread implements IServerStatus{
 				server.setActive(false);
 			}
 		}
-		
+		/**/
 	}
 
 	@Override
 	public Boolean checkServerStatus(Server server) throws ServerNotFoundException, InterruptedException {
-		IServerStatusPublisher publisher = PublisherFactory.createServerStatusPublisher();
+		/*IServerStatusPublisher publisher = PublisherFactory.createServerStatusPublisher();
 		AsyncResult callback = publisher.statusCheckMessage(server);
 		Thread.sleep(RESPONSE_WAIT_TIME);
 		if(callback.isCompleted()){
@@ -64,7 +64,8 @@ public class ServerStatus extends Thread implements IServerStatus{
 			server.setActive(false);
 			return false;
 		}
-
+		/**/
+		return true;
 	}
 	@Override
 	public Boolean checkFileOnServer(List<FileMetadata> files, Server server) throws ServerNotFoundException {
