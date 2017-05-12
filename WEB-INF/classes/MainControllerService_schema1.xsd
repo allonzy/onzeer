@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservice.onzeer.univavignon.fr/" xmlns:tns="http://webservice.onzeer.univavignon.fr/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="MalformedURLException" type="tns:MalformedURLException"/>
+
+  <xs:element name="getAudioFile" type="tns:getAudioFile"/>
+
+  <xs:element name="getAudioFileResponse" type="tns:getAudioFileResponse"/>
+
+  <xs:element name="startStreaming" type="tns:startStreaming"/>
+
+  <xs:element name="startStreamingResponse" type="tns:startStreamingResponse"/>
+
+  <xs:complexType name="getAudioFile">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAudioFileResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:fileMetadata" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fileMetadata" abstract="true">
+    <xs:sequence>
+      <xs:element name="availableFileLocation" type="tns:server" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="fileName" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="server">
+    <xs:sequence>
+      <xs:element name="active" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="serverAdress" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="startStreaming">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="startStreamingResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:anyURI" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MalformedURLException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
