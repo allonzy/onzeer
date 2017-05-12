@@ -8,6 +8,7 @@ import javax.persistence.*;
 
 import fr.univavignon.onzeer.exceptions.DuplicateFileException;
 import fr.univavignon.onzeer.exceptions.FileNotFoundException;
+import fr.univavignon.onzeer.model.AudioFileMetadata;
 import fr.univavignon.onzeer.model.Criteria;
 import fr.univavignon.onzeer.model.FileMetadata;
 import fr.univavignon.onzeer.model.Server;
@@ -71,6 +72,14 @@ public class Indexer implements IIndexer {
 	public FileMetadata getFileById(int fileId) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public AudioFileMetadata getFileByname(String fileName) {
+		AudioFileMetadata audioMetadata = new AudioFileMetadata();
+		audioMetadata.setFileName("hotelCalifornia.mp3");
+		return audioMetadata;
+		
 	}
 
 }

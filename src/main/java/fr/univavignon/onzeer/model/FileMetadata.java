@@ -22,6 +22,7 @@ public abstract class FileMetadata implements Serializable, ISelectable {
 	/**
 	 * 
 	 */
+	private String fileName;
 	private Vector<Server> availableFileLocation;
 	
 	public Long getId() {
@@ -42,5 +43,11 @@ public abstract class FileMetadata implements Serializable, ISelectable {
 	}
 	public void setAvailableFileLocation(Vector<Server> availableFileLocation) {
 		this.availableFileLocation = availableFileLocation;
+	}
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
 }

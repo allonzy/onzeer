@@ -3,9 +3,7 @@ package fr.univavignon.onzeer.model;
 
 import java.io.Serializable;
 
-import javax.persistence.*;
 
-@Entity
 public class Server implements Serializable {
 	/**
 	 * 
@@ -14,60 +12,26 @@ public class Server implements Serializable {
 	/**
 	 * 
 	 */
-	@Id
-	public String serverAdress;
-	public String getServerAdress() {
-		return serverAdress;
-	}
-
-	public void setServerAdress(String serverAdress) {
-		this.serverAdress = serverAdress;
-	}
-
-	public String getServerPort() {
-		return serverPort;
-	}
-
-	public void setServerPort(String serverPort) {
-		this.serverPort = serverPort;
-	}
-
-	public Boolean getActive() {
-		return active;
-	}
-
-	public void setActive(Boolean active) {
-		this.active = active;
-	}
-
-	public Integer getAvailableSpace() {
-		return availableSpace;
-	}
-
-	public void setAvailableSpace(Integer availableSpace) {
-		this.availableSpace = availableSpace;
-	}
-
-	/**
-	 * 
-	 */
-	@Id
-	public String serverPort;
-	
-	/**
-	 * Store the state of the server
-	 */
-	public Boolean active;
+	//public String serverAdress;
 	
 	/**
 	 * Store the free space of the server
 	 */
-	public Integer availableSpace;
-
-	@Override
-	public String toString() {
-		return serverAdress + ":" + serverPort;
+	public String getServerAdress() {
+		return "";
+		//return this.serverAdress;
 	}
-	
+
+	public void setServerAdress(String serverAdress) {
+		//this.serverAdress = serverAdress;
+	}
+
+	public Boolean getActive() {
+		return true;
+	}
+
+	public void setActive(Boolean active) {
+		
+	}
 
 }

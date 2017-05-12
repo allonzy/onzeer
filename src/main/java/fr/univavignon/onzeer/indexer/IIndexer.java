@@ -49,4 +49,6 @@ public interface IIndexer {
 	 * @return
 	 */
 	public FileMetadata getFileById(int fileId);
+
+	public AudioFileMetadata getFileByname(String fileName);
 }
